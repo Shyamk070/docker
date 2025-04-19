@@ -18,3 +18,6 @@ while True:
         print("Waiting for PostgreSQL...")
         time.sleep(2)
 
+    if error:
+        print("Database connection failure: %s" % error, file=sys.stderr)
+        sys.exit(1)
